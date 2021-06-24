@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=+, initial-scale=1.0" />
+    <title>Transaction type</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div style="color: black">
+      <form action="{{url_for('predict')}}" method="Post">
+        <center>
+          <h1>Classifying a transaction as Legitimate or Fraud</h1>
+          <h2>(Provided data needs to be PCA transformed until specified)</h2>
+        </center>
+
+        <br><br>
+
+        <div class="col-md-12 row">
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="time">Provide value of Time below (without PCA transformation).</label>
+              <input type="number" step="any" name="time" id="time" placeholder="Time" required class="form-control" style="width:30%"/>
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V1">Provide value of Principal Component feature V1 below.</label>
+              <input type="number" step="any" name="V1" id="V1" placeholder="V1" required class="form-control" style="width: 30%"/>
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V2">Provide value of Principal Component feature V2 below.</label>
+              <input type="number" step="any" name="V2" id="V2" placeholder="V2" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V3">Provide value of Principal Component feature V3 below.</label>
+              <input type="number" step="any" name="V3" id="V3" placeholder="V3" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V4">Provide value of Principal Component feature V4 below.</label>
+              <input type="number" step="any" name="V4" id="V4" placeholder="V4" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V5">Provide value of Principal Component feature V5 below.</label>
+              <input type="number" step="any" name="V5" id="V5" placeholder="V5" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V6">Provide value of Principal Component feature V6 below.</label>
+              <input type="number" step="any" name="V6" id="V6" placeholder="V6" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V7">Provide value of Principal Component feature V7 below.</label>
+              <input type="number" step="any" name="V7" id="V7" placeholder="V7" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V8">Provide value of Principal Component feature V8 below.</label>
+              <input type="number" step="any" name="V8" id="V8" placeholder="V8" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V9">Provide value of Principal Component feature V9 below.</label>
+              <input type="number" step="any" name="V9" id="V9" placeholder="V9" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V10">Provide value of Principal Component feature V10 below.</label>
+              <input type="number" step="any" name="V10" id="V10" placeholder="V10" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V11">Provide value of Principal Component feature V11 below.</label>
+              <input type="number" step="any" name="V11" id="V11" placeholder="V11" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V12">Provide value of Principal Component feature V12 below.</label>
+              <input type="number" step="any" name="V12" id="V12" placeholder="V12" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V13">Provide value of Principal Component feature V13 below.</label>
+              <input type="number" step="any" name="V13" id="V13" placeholder="V13" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V14">Provide value of Principal Component feature V14 below.</label>
+              <input type="number" step="any" name="V14" id="V14" placeholder="V14" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V15">Provide value of Principal Component feature V15 below.</label>
+              <input type="number" step="any" name="V15" id="V15" placeholder="V15" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V16">Provide value of Principal Component feature V16 below.</label>
+              <input type="number" step="any" name="V16" id="V16" placeholder="V16" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V17">Provide value of Principal Component feature V17 below.</label>
+              <input type="number" step="any" name="V17" id="V17" placeholder="V17" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V18">Provide value of Principal Component feature V18 below.</label>
+              <input type="number" step="any" name="V18" id="V18" placeholder="V18" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V19">Provide value of Principal Component feature V19 below.</label>
+              <input type="number" step="any" name="V19" id="V19" placeholder="V19" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V20">Provide value of Principal Component feature V20 below.</label>
+              <input type="number" step="any" name="V20" id="V20" placeholder="V20" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V21">Provide value of Principal Component feature V21 below.</label>
+              <input type="number" step="any" name="V21" id="V21" placeholder="V21" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V22">Provide value of Principal Component feature V22 below.</label>
+              <input type="number" step="any" name="V22" id="V22" placeholder="V22" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V23">Provide value of Principal Component feature V23 below.</label>
+              <input type="number" step="any" name="V23" id="V23" placeholder="V23" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V24">Provide value of Principal Component feature V24 below.</label>
+              <input type="number" step="any" name="V24" id="V24" placeholder="V24" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V25">Provide value of Principal Component feature V25 below.</label>
+              <input type="number" step="any" name="V25" id="V25" placeholder="V25" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V26">Provide value of Principal Component feature V26 below.</label>
+              <input type="number" step="any" name="V26" id="V26" placeholder="V26" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V27">Provide value of Principal Component feature V27 below.</label>
+              <input type="number" step="any" name="V27" id="V27" placeholder="V27" required class="form-control" style="width: 30%">
+            </div>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="V28">Provide value of Principal Component feature V28 below.</label>
+              <input type="number" step="any" name="V28" id="V28" placeholder="V28" required class="form-control" style="width: 30%">
+            </div>
+          </div>      
+          
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="Amount">Provide value Amount (without PCA transformation).</label>
+              <input type="number" step="any" name="Amount" id="Amount" placeholder="Amount" required class="form-control" style="width: 30%">
+            </div>
+          </div>           
+        </div>
+
+        <br />
+
+        <center>
+          <button id="Sub" type="submit">Submit</button>
+        </center>
+      </form>
+      <br>
+
+      <center>
+        <h3>{{prediction_text}}</h3>
+      </center>
+      
+    </div>
+    <style>
+      body {background-color: gray;}
+    </style>
+  </body>
+</html>
