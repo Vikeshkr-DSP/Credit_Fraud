@@ -14,11 +14,11 @@ As we know Logistic Regression is a distance based algorithm and all tha feature
 
 XGBoost got the best AUC score of 0.9871 and will be used for deployment and app creation.
 ## Web App
-Wep app has been created and deployed using Flask and Heroku which can be accessed at https://credit-fraud-detection-xgb.herokuapp.com/ and looks like:
+Wep app has been created and deployed using Flask and Heroku which can be accessed at https://credit-fraud.azurewebsites.net/ and looks like:
 ![image](https://user-images.githubusercontent.com/66907101/123978162-45624500-d9dd-11eb-90fd-f0e26db9464b.png)
 You need to provide all the details asked and select Submit button. The web app will predict whether the transaction is fraud or legitimate depending upon the values passed.
 ## Technology Used
 * Jupyter Notebook (Python 3.8)
 * Spyder (creating app.py)
 * VS Code (creating front end web page)
-* Heroku and Github (for deployment)
+* Azure and Github (for deployment)
