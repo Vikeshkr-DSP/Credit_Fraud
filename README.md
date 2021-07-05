@@ -8,13 +8,13 @@ Machine Learning model has been trained using different algorithms. AUC (Area Un
 ### Random Forest
 Firstly, Random Forest was trained with its default parameters and obtained AUC score was 0.9631 on validation data. After using all the features for model training, insignificant features (features having importance value less than 0.0125) were removed and the model was retrained on default parameters and AUC score of 0.9513 was obtained on validation data. Since all the features are PCA transformed, it is difficult to decide insignificant features. Removing any features with very less importance value is resulting towards worsening in the prediction or reduction in AUC score.
 ### XGBoost
-XGBoost was firstly trained with its default parameters and AUC score obtained on validation data was 0.9760. As we have experienced reduction is AUC score after removing some features in Random Forest, so any feature is not removed for training XGBoost. HPT (Hyperparameter Tuning) was done considering all the independent feature and AUC score of 0.9871 was obtained which is the best so far.
+XGBoost was firstly trained with its default parameters and AUC score obtained on validation data was 0.9760. As we have experienced reduction is AUC score after removing some features in Random Forest, so any feature is not removed for training XGBoost. HPT (Hyperparameter Tuning) was done considering all the independent feature and AUC score of 0.9871 was obtained which is the best so far. After upsampling the minority class using SMOTE gives an AUC score of 0.9834 on validation data which is less than the previous.
 ### Logistic Regression
 As we know Logistic Regression is a distance based algorithm and all tha features needs to scaled before being used for model training. Only two features, Time and Amount needs to be rescaled as all the features are akready scaled. After rescaling the features, it was used to train Logistic Regression with default parameters and AUC score of 0.7588 was obtained which is very less. As we know this is a imbalanced class problem, so SMOTE (Upsampling) was used to create some random observation which will make the training data balanced. After SMOTE, Logistic Regression gives an AUC score of 0.9350 which is improved a lot but is less than the AUC score of Random Forest and XGBoost.
 
 XGBoost got the best AUC score of 0.9871 and will be used for deployment and app creation.
 ## Web App
-Wep app has been created and deployed using Flask and Heroku which can be accessed at https://credit-fraud.azurewebsites.net/ and looks like:
+Wep app has been created and deployed using Flask on Azure which can be accessed at https://credit-fraud.azurewebsites.net/ and looks like:
 ![image](https://user-images.githubusercontent.com/66907101/123978162-45624500-d9dd-11eb-90fd-f0e26db9464b.png)
 You need to provide all the details asked and select Submit button. The web app will predict whether the transaction is fraud or legitimate depending upon the values passed.
 ## Technology Used
